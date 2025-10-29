@@ -3,16 +3,13 @@ import React from 'react';
 import Page from './Components/Page';
 import Count from './Components/Count';
 import Toggle from './Components/Toggle';
+import Stopwatch from './Components/Stopwatch';
 function App() {
-  // const info = {
-  //   name: "satish",
-  //   age: 23,
-  //   class: 'K23HS',
-  // }
+
 
   return (
     <>
-      <Toggle />
+      <Stopwatch />
     </>
   )
 }

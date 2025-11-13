@@ -1,9 +1,14 @@
 import React, { useState } from 'react'
 
-const Count = () => {
-    const [count, setCount] = useState(0);
+const Count = ({count, increaseCount}) => {
+    
   return (
-    <button onClick={() => setCount(count + 1)}>{count}</button>
+    <>
+    <div>{count}</div>
+    <button onClick={() => increaseCount()} className='bg-green-500 rounded-2xl m-2'>increment</button>
+    
+    </>
+    
   )
 }
 

@@ -1,8 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-const Welcome = () => {
+const Welcome = ({ name, section , course }) => {
+  const [on, setOn] = useState(false);
+
   return (
-    <div className='h1 text-4xl text-red-600 text-shadow-sky-50 font-serif'>Hello, React Learners!</div>
+    <div>
+      <button className='rounded-2xl w-10 h-6 border-2' onClick={() => setOn(!on)}>{on ? 'off' : 'on'}</button>
+      {
+      on &&  <div className='h1 text-4xl text-red-600 text-shadow-sky-50 font-serif'>Hi I am {name} from {section} in {course}</div>
+    }
+    </div>
+
+
+
+
+
   )
 }
 

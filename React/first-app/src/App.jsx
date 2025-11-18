@@ -9,20 +9,13 @@ import Welcome from './Components/Welcome';
 import Greetings from './Components/Greetings';
 import Quote from './Components/Quote';
 import Array from './Components/Array';
+import Button from './Components/Button';
+import Refcount from './Components/Refcount';
 function App() {
-
-  const [count, setCount] = useState(0);
-
-  function increaseCount(){
-    setCount(e => e + 1);
-  }
 
   return (
     <>
-      <Count 
-      count = {count}
-      increaseCount = {increaseCount}
-      />
+      <Stopwatch />
       
     </>
   )

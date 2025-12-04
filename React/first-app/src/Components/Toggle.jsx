@@ -1,17 +1,16 @@
 import React, { useState } from 'react'
+import useCustomToggle from './useCustomToggle';
 
 const Toggle = () => {
-    const [isVisible, setIsVisible] = useState(true);
+     const {theme, changeTheme} = useCustomToggle();
+     const themeColor = `${theme ? "bg-white text-black" : "bg-black text-white"} text-3xl  rounded-2xl w-25 h-max`; 
 
     return (
     <>
     
-    <button className='text-3xl bg-amber-300 rounded-2xl w-25 h-max' onClick={() => setIsVisible(!isVisible)}>
-        {isVisible ? 'show' : 'hide'}
+    <button className={`text-xl ${themeColor}`} onClick={() => changeTheme()}>
+        {changeTheme ? 'dark' : 'light'}
     </button>
-    <div className='flex text-2xl justify-center align-middle text-center p-2'>
-        {isVisible && 'show is clicked'}
-    </div>
     </>
   )
 }
